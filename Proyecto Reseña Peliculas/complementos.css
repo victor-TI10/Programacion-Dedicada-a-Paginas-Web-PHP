@@ -1,0 +1,280 @@
+:root { 
+    --primary: #6366f1;
+    --secondary: #4f46e5;
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --text: #1e293b;
+    --muted: #64748b;
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: linear-gradient(135deg, #eef2ff, #f8fafc);
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* --- Header --- */
+header { 
+    width: 100%; 
+    text-align: center; 
+    margin-bottom: 30px; 
+}
+
+/* --- Grid de Películas --- */
+.movies-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.movie-card {
+    background: var(--card);
+    border-radius: 16px;
+    padding: 15px;
+    width: 220px;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.movie-card:hover { 
+    transform: translateY(-10px); 
+    box-shadow: 0 15px 30px rgba(99, 102, 241, 0.2); 
+}
+
+.movie-card img { 
+    width: 100%; 
+    border-radius: 12px; 
+    margin-bottom: 12px; 
+    height: 300px; 
+    object-fit: cover;
+    background: #eee; 
+}
+
+.movie-card h3 { font-size: 1.1rem; color: var(--primary); margin-bottom: 5px; }
+.info { font-size: 0.85rem; color: var(--muted); }
+
+/* --- Formularios y Contenedores --- */
+.container { width: 100%; max-width: 500px; margin-top: 20px; }
+
+form { 
+    background: var(--card); 
+    padding: 25px; 
+    border-radius: 16px; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+}
+
+fieldset { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 12px; 
+    border: 2px solid #e2e8f0; 
+    border-radius: 10px; 
+    padding: 20px; 
+}
+
+legend { font-size: 1.4rem; font-weight: bold; color: var(--primary); padding: 0 10px; }
+
+input, select, textarea { 
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #cbd5e1; 
+    border-radius: 8px; 
+    margin-top: 5px; 
+}
+
+button { 
+    margin-top: 20px; 
+    padding: 14px; 
+    background: var(--primary); 
+    color: white; 
+    border: none; 
+    border-radius: 10px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: 0.3s; 
+}
+
+button:hover { background: var(--secondary); transform: translateY(-2px); }
+
+/* --- SECCIÓN DE CRÉDITOS (Tus datos) --- */
+/* Estilizamos los <p> que están después del main o container */
+body > p {
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 10px 0;
+}
+
+/* Nombres de integrantes */
+/*elminado
+
+/* El grupo (4APGM) */
+/*eliminamos el margin-top del primer p para que no se duplique con el anterior*/
+
+/* La fecha */
+/*borrado
+.tabla-resena {
+    width: 100%;
+    max-width: 500px;
+    margin: 25px auto 0 auto;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.15);
+}
+ 
+/* Encabezado de la tabla */
+.tabla-resena thead tr {
+    background: var(--primary);
+    color: white;
+}
+ 
+.tabla-resena thead th {
+    padding: 14px 20px;
+    font-size: 1.1rem;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+ 
+/* Filas alternas */
+.tabla-resena tbody tr:nth-child(even) {
+    background: #eef2ff;
+}
+ 
+.tabla-resena tbody tr:nth-child(odd) {
+    background: #ffffff;
+}
+ 
+.tabla-resena tbody tr:hover {
+    background: #e0e7ff;
+    transition: background 0.2s;
+}
+ 
+/* Celdas */
+.tabla-resena td {
+    padding: 12px 18px;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 0.95rem;
+    vertical-align: top;
+}
+ 
+/* Columna izquierda — etiquetas */
+.tabla-resena td:first-child {
+    font-weight: 700;
+    color: var(--primary);
+    width: 38%;
+    white-space: nowrap;
+}
+ 
+/* Columna derecha — valores */
+.tabla-resena td:last-child {
+    color: var(--text);
+}
+ 
+/* Badge de veredicto dentro de la tabla */
+.tabla-resena .badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: var(--primary);
+    color: white;
+}
+/*logo header*/
+
+.header-content + p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+
+.header-logo {
+    height: 90px;
+    width: auto;
+    /* Recorta el fondo gris de la imagen */
+    border-radius: 45%;
+    background: white;
+    padding: 5px;
+    box-shadow: 0 3px 10px rgba(99, 102, 241, 0.1);
+}
+/* --- Nueva Sección de Pie de Página --- */
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Separa los bloques a los extremos */
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 2px solid #e2e8f0;
+    gap: 40px;
+}
+
+/* Estilo para la lista de descripción (Izquierda) */
+.creditos-izq dl dt {
+    font-weight: bold;
+    color: var(--primary); /* Usa el color definido en tus variables[cite: 1] */
+    margin-top: 15px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.creditos-izq dl dd {
+    margin-left: 0;
+    color: var(--text);
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+/* Estilo para las fuentes (Derecha) */
+.fuentes-der {
+    max-width: 500px;
+    text-align: left;
+}
+
+.fuentes-der h3 {
+    font-size: 1.1rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.fuentes-der ul {
+    list-style-type: square; /* Etiqueta <ul> con estilo cuadrado */
+    padding-left: 20px;
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+.fuentes-der li {
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+.titulo-footer {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0;
+    font-weight: bold;
+    color: var(--primary);
+}

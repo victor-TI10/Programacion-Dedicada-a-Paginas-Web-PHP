@@ -1,0 +1,36 @@
+========================================
+Código Peli:  00001
+Película:     Interestelar (2014)
+Actor Principal: Matthew McConaughey
+Géneros:      Aventura
+Calificación: 9/10
+Veredicto:    Altamente Recomendada
+Reseña:       buena pelicula
+Fecha:        25/05/2026 03:48
+========================================
+Código Peli:  00003
+Película:     Spider-Man (2018)
+Actor Principal: Benedict Cumberbatch
+Géneros:      Animación
+Calificación: 8/10
+Veredicto:    Altamente Recomendada
+Reseña:       me gusto mucho
+Fecha:        25/05/2026 04:10
+========================================
+Código Peli:  00002
+Película:     Shrek (2001)
+Actor Principal: Mike Myers
+Géneros:      Animación
+Calificación: 10/10
+Veredicto:    Altamente Recomendada
+Reseña:       ......................................
+Fecha:        25/05/2026 04:11
+========================================
+Código Peli:  00004
+Película:     MarioGalaxy (2026)
+Actor Principal: fffff
+Géneros:      Drama
+Calificación: 8/10
+Veredicto:    No recomendada
+Reseña:       poca atracción
+Fecha:        25/05/2026 04:12
