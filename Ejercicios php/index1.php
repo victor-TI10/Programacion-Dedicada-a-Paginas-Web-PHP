@@ -31,7 +31,7 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     
 <section>
        <h1><?php echo $data['title'] ;?> se estrena en <?php echo $data['days_until']; ?> dias</h1>
-       
+
    <img src="<?php echo $data['poster_url'];?>" width="400" alt="Poster de <?php echo $data['title']; ?>"
    style="border-radius: 16px; box-shadow: 0 4px 8px rgb(4, 3, 3);"
    />
