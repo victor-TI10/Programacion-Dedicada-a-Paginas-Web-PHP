@@ -43,14 +43,6 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 </hgroup>
 </main>
 
-
-
-
-
-
-
-
-
 <style>
     root {
         color-scheme: night black ;
