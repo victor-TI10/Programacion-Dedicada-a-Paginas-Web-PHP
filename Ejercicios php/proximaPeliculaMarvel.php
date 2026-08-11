@@ -1,16 +1,9 @@
 <?php
-CONST API_URL = "https://www.whenisthenextmcufilm.com/api";
-#inicializar una nueva sesion de cURL; ch = cuRL handle
-$ch = curl_init(API_URL);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-/*Ejecutar la peticion
- background-color: black;
- y guadamos el resultado
-*/
- $result = curl_exec($ch); 
- $data = json_decode($result, true);
- curl_close($ch);
+require_once 'funcionesPeli.php';
 
+
+$data = get_datas(API_URL);
+$days_message = days_until_message($data['days_until']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,7 +23,7 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     <h1 style="text-align: center;">La proxima pelicula de Marvel </h1>
     
 <section>
-       <h1><?php echo $data['title'] ;?> se estrena en <?php echo $data['days_until']; ?> dias</h1>
+       <h1><?php echo $data['title'] ;?> - <?php echo $days_message; ?></h1>
 
    <img src="<?php echo $data['poster_url'];?>" width="400" alt="Poster de <?php echo $data['title']; ?>"
    style="border-radius: 16px; box-shadow: 0 4px 8px rgb(4, 3, 3);"
