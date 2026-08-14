@@ -1,25 +1,19 @@
 <?php
 require_once 'funcionesPeli.php';
 
-
 $data = get_datas(API_URL);
 $days_message = days_until_message($data['days_until']);
+
+#Se añadido un archivo head.php para separar el codigo de la cabecera del indexProximaPelicula.php
+ require_once __DIR__ . '/head.HTML'; 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="La proxima pelicula de Marvel">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La proxima pelicula de Marvel</title>
-    <!-- Centered viewport -->
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"
->
-</head> 
 
  <main>
+    <link
+  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css">
     <h1 style="text-align: center;">La proxima pelicula de Marvel </h1>
     
 <section>
@@ -35,29 +29,5 @@ $days_message = days_until_message($data['days_until']);
     <p>¿Cual es el proxima pelicula de estreno de Marvel?- <?php echo $data['following_production']['title']; ?>-</p>
 </hgroup>
 </main>
-
-<style>
-    root {
-        color-scheme: night black ;
-    }
-   body {
-        color: white;
-        display: center;
-    }
-    section {
-        display: flex;
-          flex-direction: column;
-        justify-content: center;
-        text-align: center;
-    }
-    img{
- margin: 0 auto;
-
-    }
-
-    hgroup {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    </style>
+</html>
+<?php require_once __DIR__ . '/styles.css'; ?>
