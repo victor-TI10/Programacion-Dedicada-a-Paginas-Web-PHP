@@ -5,15 +5,14 @@ $data = get_datas(API_URL);
 $days_message = days_until_message($data['days_until']);
 
 #Se añadido un archivo head.php para separar el codigo de la cabecera del indexProximaPelicula.php
- require_once __DIR__ . '/head.HTML'; 
+ render_template('head'); 
+
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
  <main>
-    <link
-  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css">
     <h1 style="text-align: center;">La proxima pelicula de Marvel </h1>
     
 <section>
@@ -23,11 +22,12 @@ $days_message = days_until_message($data['days_until']);
    style="border-radius: 16px; box-shadow: 0 4px 8px rgb(4, 3, 3);"
    />
 </section>
+
 <hgroup>
     <h2><n>Fecha de estreno: <?php echo $data['release_date']; ?></n></h2>
     <h3>Tipo de produccion: <?php echo $data['type']; ?></h3>
     <p>¿Cual es el proxima pelicula de estreno de Marvel?- <?php echo $data['following_production']['title']; ?>-</p>
 </hgroup>
+
 </main>
 </html>
-<?php require_once __DIR__ . '/styles.css'; ?>

@@ -20,7 +20,12 @@ function days_until_message(int $days_until): string {
  };
 }
 
+function render_template(string $template, array $data = []) {
+if (file_exists("templates/$template.HTML")) {
+     return require "templates/$template.HTML";
+}
 
+}
 
 
 
